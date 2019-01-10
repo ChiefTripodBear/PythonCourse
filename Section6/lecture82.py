@@ -16,3 +16,8 @@ cars = [
 file = open('Section6/data/cars_json.txt', 'w')
 json.dump(cars, file)
 file.close()
+
+my_json_string = '[{"name": "Alfa Romeo", "released": 1950}]'
+
+incorrect_car = json.loads(my_json_string) #turns a string into a dictionary, json.dumps is the other way around
+print(incorrect_car[0]['name'])
